@@ -21,7 +21,7 @@ async def on_ready():
     # Start the scheduled task when the bot is ready
     send_scheduled_dm.start()
 
-@tasks.loop(hours=48) # 48 hours = 2 days
+@tasks.loop(hours=0.1    ) # 48 hours = 2 days
 async def send_scheduled_dm():
     try:
         user = await bot.fetch_user(TARGET_USER_ID)
